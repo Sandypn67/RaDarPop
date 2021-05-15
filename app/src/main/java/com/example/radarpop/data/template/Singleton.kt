@@ -1,7 +1,7 @@
-package com.example.radarpop.data.template.liste
+package com.example.radarpop.data.template
 
 import com.example.radarpop.data.template.apibook.BookApi
-import com.example.radarpop.data.template.liste.BookApp.Companion.context
+import com.example.radarpop.data.template.BookApp.Companion.context
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

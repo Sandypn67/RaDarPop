@@ -8,7 +8,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.radarpop.R
 import com.example.radarpop.data.template.apibook.BookDetailResp
-import com.example.radarpop.data.template.liste.Singleton
+import com.example.radarpop.data.template.Singleton
+import com.example.radarpop.data.template.liste.Book
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,16 +28,16 @@ class BookDetailFrag : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        TextViewName = view.findViewById(R.id.pokemon_detail_name)
+        TextViewName = view.findViewById(R.id.book_detail_name)
         callApi()
 //        view.findViewById<Button>(R.id.button_second).setOnClickListener {
 //            findNavController().navigate(R.id.navigateToPokemonListFragment)
     }
 
     private fun callApi() {
-        val id = arguments?.getInt("pokemonId") ?: -1
-        Singleton.bookApi.getPokemonDetail(id).enqueue(object : Callback<BookDetailResp> {
-            override fun onFailure(call: Call<Book>, t: Throwable) {
+        val id = arguments?.getInt("bookId") ?: -1
+        Singleton.bookApi.getBookDetail(id).enqueue(object : Callback<BookDetailResp> {
+            override fun onFailure(call: Call<BookDetailResp>, t: Throwable) {
             }
 
             override fun onResponse(call: Call<BookDetailResp>, response: Response<BookDetailResp>) {

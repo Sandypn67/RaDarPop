@@ -1,4 +1,4 @@
-package com.example.radarpop.data.template.liste
+package com.example.radarpop.data.template
 
 import android.app.Application
 import android.content.Context
