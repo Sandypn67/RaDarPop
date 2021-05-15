@@ -5,9 +5,9 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface BookApi {
-    @GET("book")
+    @GET("pokemon")
     fun getBookList(): Call<BookListResp>
 
-    @GET("book/{id}")
+    @GET("pokemon/{id}")
     fun getBookDetail(@Path("id") id:Int): Call<BookDetailResp>
 }

@@ -21,8 +21,8 @@ class BookAdapter (private var dataSet: List<Book> , var listener: ( (Int) -> Un
         val imageView: ImageView
         init {
             // Define click listener for the ViewHolder's View.
-            textView = view.findViewById(R.id.pokemon_name)
-            imageView = view.findViewById(R.id.pokemon_img)
+            textView = view.findViewById(R.id.book_name)
+            imageView = view.findViewById(R.id.book_img)
         }
     }
 
