@@ -25,3 +25,7 @@ class Singleton {
 
     }
 }
+
+/**
+ * https://ghibliapi.herokuapp.com/films
+ * */

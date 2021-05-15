@@ -10,6 +10,7 @@
         android:id="@+id/book_detail_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/indieflowerregular"
         tools:text ="The Hunger Games"
         app:layout_constraintVertical_bias="0.4"
         app:layout_constraintTop_toTopOf="parent"

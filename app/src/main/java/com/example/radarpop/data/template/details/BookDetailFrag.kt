@@ -14,7 +14,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class BookDetailFrag : Fragment() {
+class  BookDetailFrag : Fragment() {
 
     private lateinit var TextViewName : TextView
 
@@ -30,8 +30,6 @@ class BookDetailFrag : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         TextViewName = view.findViewById(R.id.book_detail_name)
         callApi()
-//        view.findViewById<Button>(R.id.button_second).setOnClickListener {
-//            findNavController().navigate(R.id.navigateToPokemonListFragment)
     }
 
     private fun callApi() {

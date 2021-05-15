@@ -6,22 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".data.template.liste.BookListFrag"
-    android:background="@color/screenBackground"
+    android:background="@color/fond"
     >
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/book_recyclerview"
-        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/writeTool"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <ProgressBar
         android:id="@+id/book_loader"
-        android:textColor="@color/black"
+        android:textColor="@color/writeTool"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -31,9 +30,10 @@
         />
     <TextView
         android:id="@+id/book_error"
-        android:textColor="@color/black"
+        android:textColor="@color/write"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/indieflowerregular"
         android:text="@string/error_generic"
         android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent"

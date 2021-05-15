@@ -6,7 +6,7 @@ data class BookDetailResp(
 )
 
 data class BookSlot(
-    val slot: Int,
+    val slot: String,
     val type: BookType
 )
 
