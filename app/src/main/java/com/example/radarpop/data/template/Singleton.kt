@@ -1,7 +1,7 @@
 package com.example.radarpop.data.template
 
-import com.example.radarpop.data.template.apibook.BookApi
-import com.example.radarpop.data.template.BookApp.Companion.context
+import com.example.radarpop.data.template.apibook.GhibliApi
+import com.example.radarpop.data.template.GhibliApp.Companion.context
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -16,12 +16,12 @@ class Singleton {
             .cache(cache)
             .build()
 
-        val bookApi: BookApi = Retrofit.Builder()
+        val bookApi: GhibliApi = Retrofit.Builder()
             .baseUrl("https://pokeapi.co/api/v2/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()
-            .create(BookApi::class.java)
+            .create(GhibliApi::class.java)
 
     }
 }

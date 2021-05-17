@@ -6,8 +6,19 @@
     app:startDestination="@id/BookListFragment">
 
     <fragment
+        android:id="@+id/Option"
+        android:name="com.example.radarpop.data.template.liste.GhibliListFrag"
+        android:label="accueil"
+        tools:layout="@layout/fragment_book_list">
+
+        <action
+            android:id="@+id/navigateToFirstPage"
+            app:destination="@id/BookListFragment" />
+    </fragment>
+
+    <fragment
         android:id="@+id/BookListFragment"
-        android:name="com.example.radarpop.data.template.liste.BookListFrag"
+        android:name="com.example.radarpop.data.template.liste.GhibliListFrag"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_book_list">
 
@@ -22,7 +33,9 @@
         tools:layout="@layout/fragment_book_details">
 
         <action
-            android:id="@+id/navigateToPokemonListFragment"
+            android:id="@+id/navigateToBookListFragment"
             app:destination="@id/BookListFragment" />
     </fragment>
+
+
 </navigation>

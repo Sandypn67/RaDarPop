@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fond"
     tools:context=".data.template.details.BookDetailFrag">
 
     <TextView
@@ -12,11 +13,27 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/indieflowerregular"
         tools:text ="The Hunger Games"
+        android:background="@color/trans"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
         app:layout_constraintVertical_bias="0.4"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
+    <Button
+        android:id="@+id/button_retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/retour"
+        android:padding="@dimen/cardview_default_elevation"
+        android:fontFamily="@font/spiraxregular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/book_detail_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

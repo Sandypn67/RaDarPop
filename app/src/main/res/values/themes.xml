@@ -14,6 +14,14 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="AppTheme" parent="Theme.RaDarPop">
+        <!-- Customize your theme here. -->
+        <!-- Base application thème. -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="spinnerDropDownItemStyle">@style/Widget.AppCompat.TextView.SpinnerItem</item>
+    </style>
+
     <style name="Theme.RaDarPop.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

@@ -3,12 +3,12 @@ package com.example.radarpop.data.template.liste
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.radarpop.data.template.Singleton
-import com.example.radarpop.data.template.apibook.BookListResp
+import com.example.radarpop.data.template.apibook.GhibliListResp
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class BookListViewModel: ViewModel() {
+class GhibliListViewModel: ViewModel() {
     val pokeList : MutableLiveData<BookModel> = MutableLiveData()
 
     init {
@@ -18,12 +18,12 @@ class BookListViewModel: ViewModel() {
     private fun callApi() {
         pokeList.value = BookLoader
 
-        Singleton.bookApi.getBookList().enqueue(object : Callback<BookListResp> {
-            override fun onFailure(call: Call<BookListResp>, t: Throwable) {
+        Singleton.bookApi.getBookList().enqueue(object : Callback<GhibliListResp> {
+            override fun onFailure(call: Call<GhibliListResp>, t: Throwable) {
                 pokeList.value = BookError
             }
 
-            override fun onResponse(call: Call<BookListResp>, response: Response<BookListResp>) {
+            override fun onResponse(call: Call<GhibliListResp>, response: Response<GhibliListResp>) {
                 if (response.isSuccessful && response.body() != null) {
                     val pokemonResponse = response.body()!!
                     pokeList.value = PokemonSuccess(pokemonResponse.results)

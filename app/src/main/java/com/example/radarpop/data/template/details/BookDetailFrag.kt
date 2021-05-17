@@ -4,15 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.radarpop.R
 import com.example.radarpop.data.template.apibook.BookDetailResp
 import com.example.radarpop.data.template.Singleton
-import com.example.radarpop.data.template.liste.Book
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import androidx.navigation.fragment.findNavController
 
 class  BookDetailFrag : Fragment() {
 
@@ -22,6 +23,10 @@ class  BookDetailFrag : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        /**super.onCreate(savedInstanceState)
+        setSupportActionBar(findViewById(R.id.toolbar))
+        val actionBar=supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)*/
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_book_details, container, false)
     }
@@ -30,6 +35,9 @@ class  BookDetailFrag : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         TextViewName = view.findViewById(R.id.book_detail_name)
         callApi()
+        view.findViewById<Button>(R.id.button_retour).setOnClickListener {
+            findNavController().navigate(R.id.navigateToBookListFragment)
+        }
     }
 
     private fun callApi() {

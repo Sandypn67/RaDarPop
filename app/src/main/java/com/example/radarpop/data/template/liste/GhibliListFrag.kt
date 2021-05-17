@@ -16,14 +16,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.radarpop.R
 
-class BookListFrag : Fragment() {
+class GhibliListFrag : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var loader : ProgressBar
     private lateinit var error_gen : TextView
 
-    private val adapter = BookAdapter(listOf(), ::onClickedPokemon)
-    private val viewModel: BookListViewModel by viewModels()
+    private val adapter = GhibliAdapter(listOf(), ::onClickedPokemon)
+    private val viewModel: GhibliListViewModel by viewModels()
 
 
     //methode pour faire du cache mais pas utilisée ici
@@ -46,8 +46,8 @@ class BookListFrag : Fragment() {
         loader = view.findViewById(R.id.book_loader)
         error_gen = view.findViewById(R.id.book_error)
         recyclerView.apply {
-            layoutManager = this@BookListFrag.layoutManager
-            adapter =this@BookListFrag.adapter
+            layoutManager = this@GhibliListFrag.layoutManager
+            adapter =this@GhibliListFrag.adapter
         }
         viewModel.pokeList.observe(viewLifecycleOwner, Observer { bookModel ->
             loader.isVisible = bookModel is BookLoader
@@ -60,7 +60,7 @@ class BookListFrag : Fragment() {
 
     }
 
-    private fun showList(pokeList: List<Book>) {
+    private fun showList(pokeList: List<Ghibli>) {
         adapter.updateList(pokeList)
     }
     private fun onClickedPokemon(id: Int) {

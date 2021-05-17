@@ -11,4 +11,11 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
     <string name="error_generic">Oops, I did it again. I play with your heart !</string>
+    <string name="retour">Retour</string>
+    <string name="param_tres">Paramètres</string>
+    <string name="fav">fav</string>
+    <string name="infos">Infos</string>
+    <string name="voir_ma_liste">Voir ma liste !</string>
+    <string name="bienvenue_dans_votre_espace_sp_cial_ghibli">Bienvenue dans votre espace spécial Ghibli</string>
+    <string name="favoris">Favoris</string>
 </resources>

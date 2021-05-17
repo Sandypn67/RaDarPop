@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.radarpop.R
 
-class BookAdapter (private var dataSet: List<Book> , var listener: ( (Int) -> Unit )? = null ) : RecyclerView.Adapter<BookAdapter.ViewHolder>() {
+class GhibliAdapter (private var dataSet: List<Ghibli>, var listener: ( (Int) -> Unit )? = null ) : RecyclerView.Adapter<GhibliAdapter.ViewHolder>() {
 
 
     /**
@@ -26,7 +26,7 @@ class BookAdapter (private var dataSet: List<Book> , var listener: ( (Int) -> Un
         }
     }
 
-    fun updateList(list : List<Book>){
+    fun updateList(list : List<Ghibli>){
         dataSet = list
         notifyDataSetChanged()
     }
