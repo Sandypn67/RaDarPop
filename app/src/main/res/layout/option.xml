@@ -10,15 +10,17 @@
         android:id="@+id/title_acc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/bienvenue_dans_votre_espace_sp_cial_ghibli"
-        android:layout_marginTop="140dp"
-        android:textColor="@color/writeTool"
-        android:textSize="20sp"
+        android:layout_marginTop="124dp"
+        android:background="@color/trans"
+        android:text="Le Studio Ghibli Inc. (株式会社スタジオジブリ, Kabushiki gaisha sutajio Jiburi) est un studio d'animation japonais fondé par Hayao Miyazaki et Isao Takahata en 1985. Il produit des longs-métrages et courts-métrages d'animation, ainsi que, dans une moindre mesure, des téléfilms, des anime et des jeux vidéo. Le studio est connu principalement pour ses longs-métrages destinés à un large public et dont plusieurs ont remporté des succès auprès de la critique et du public, ainsi que de nombreuses récompenses. Le logo du studio est une représentation de Totoro, une créature apparue dans Mon voisin Totoro, l'un des films emblématiques du studio, sorti en 1988. "
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/next_page"

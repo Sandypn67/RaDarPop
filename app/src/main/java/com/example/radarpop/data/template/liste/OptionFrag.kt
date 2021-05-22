@@ -26,7 +26,7 @@ class  OptionFrag : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         TextViewName = view.findViewById(R.id.title_acc)
         view.findViewById<Button>(R.id.next_page).setOnClickListener {
-            findNavController().navigate(R.id.navigateToFirstPage)
+            findNavController().navigate(R.id.navigateToGhibliListFragment)
         }
     }
 }

@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/Option"
-        android:name="com.example.radarpop.data.template.liste.GhibliListFrag"
+        android:name="com.example.radarpop.data.template.liste.OptionFrag"
         android:label="accueil"
         tools:layout="@layout/fragment_ghibli_list">
 
         <action
-            android:id="@+id/navigateToFirstPage"
+            android:id="@+id/navigateToGhibliListFragment"
             app:destination="@id/BookListFragment" />
     </fragment>
 
@@ -31,6 +31,9 @@
         android:name="com.example.radarpop.data.template.details.BookDetailFrag"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_ghibli_details">
+        <action
+            android:id="@+id/navigatetoInfos"
+            app:destination="@id/Option" />
 
         <action
             android:id="@+id/navigateToGhibliListFragment"

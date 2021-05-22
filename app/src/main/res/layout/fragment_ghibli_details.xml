@@ -11,28 +11,42 @@
         android:id="@+id/ghibli_detail_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/indieflowerregular"
-        tools:text ="The Hunger Games"
         android:background="@color/trans"
-        android:paddingBottom="10dp"
+        android:fontFamily="@font/indieflowerregular"
+        android:paddingLeft="5dp"
         android:paddingTop="10dp"
         android:paddingRight="5dp"
-        android:paddingLeft="5dp"
-        app:layout_constraintVertical_bias="0.4"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.376"
+        tools:text="The Hunger Games" />
+
+    <Button
+        android:id="@+id/button_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:fontFamily="@font/spiraxregular"
+        android:padding="@dimen/cardview_default_elevation"
+        android:text="Info Studio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ghibli_detail_name" />
+
     <Button
         android:id="@+id/button_retour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/retour"
-        android:padding="@dimen/cardview_default_elevation"
+        android:layout_marginStart="48dp"
         android:fontFamily="@font/spiraxregular"
+        android:padding="@dimen/cardview_default_elevation"
+        android:text="@string/retour"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ghibli_detail_name" />
 

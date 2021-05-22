@@ -36,6 +36,9 @@ class  BookDetailFrag : Fragment() {
         view.findViewById<Button>(R.id.button_retour).setOnClickListener {
             findNavController().navigate(R.id.navigateToGhibliListFragment)
         }
+        view.findViewById<Button>(R.id.button_info).setOnClickListener {
+            findNavController().navigate(R.id.navigatetoInfos)
+        }
     }
 
     private fun callApi() {
