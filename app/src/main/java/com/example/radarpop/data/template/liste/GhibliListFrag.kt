@@ -22,7 +22,7 @@ class GhibliListFrag : Fragment() {
     private lateinit var loader : ProgressBar
     private lateinit var error_gen : TextView
 
-    private val adapter = GhibliAdapter(listOf(), ::onClickedPokemon)
+    private val adapter = GhibliAdapter(listOf(), ::onClickedGhibli)
     private val viewModel: GhibliListViewModel by viewModels()
 
 
@@ -36,34 +36,34 @@ class GhibliListFrag : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_book_list, container, false)
+        return inflater.inflate(R.layout.fragment_ghibli_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recyclerView = view.findViewById(R.id.book_recyclerview)
-        loader = view.findViewById(R.id.book_loader)
-        error_gen = view.findViewById(R.id.book_error)
+        recyclerView = view.findViewById(R.id.ghibli_recyclerview)
+        loader = view.findViewById(R.id.ghibli_loader)
+        error_gen = view.findViewById(R.id.ghibli_error)
         recyclerView.apply {
             layoutManager = this@GhibliListFrag.layoutManager
             adapter =this@GhibliListFrag.adapter
         }
-        viewModel.pokeList.observe(viewLifecycleOwner, Observer { bookModel ->
-            loader.isVisible = bookModel is BookLoader
-            error_gen.isVisible = bookModel is BookError
-            if(bookModel is PokemonSuccess) {
-                adapter.updateList(bookModel.bookList)
+        viewModel.filmList.observe(viewLifecycleOwner, Observer { filmModel ->
+            loader.isVisible = filmModel is FilmLoader
+            error_gen.isVisible = filmModel is FilmError
+            if(filmModel is FilmSuccess) {
+                adapter.updateList(filmModel.filmList)
             }
 
         })
 
     }
 
-    private fun showList(pokeList: List<Ghibli>) {
+    /**private fun showList(pokeList: List<Ghibli>) {
         adapter.updateList(pokeList)
-    }
-    private fun onClickedPokemon(id: Int) {
+    }*/
+    private fun onClickedGhibli(id: Int) {
         findNavController().navigate(R.id.navigateToBookDetailFragment, bundleOf("pokemonId" to (id+1)))
     }
 }

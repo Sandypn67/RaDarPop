@@ -9,7 +9,7 @@
         android:id="@+id/Option"
         android:name="com.example.radarpop.data.template.liste.GhibliListFrag"
         android:label="accueil"
-        tools:layout="@layout/fragment_book_list">
+        tools:layout="@layout/fragment_ghibli_list">
 
         <action
             android:id="@+id/navigateToFirstPage"
@@ -20,7 +20,7 @@
         android:id="@+id/BookListFragment"
         android:name="com.example.radarpop.data.template.liste.GhibliListFrag"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_book_list">
+        tools:layout="@layout/fragment_ghibli_list">
 
         <action
             android:id="@+id/navigateToBookDetailFragment"
@@ -30,10 +30,10 @@
         android:id="@+id/BookDetailFragment"
         android:name="com.example.radarpop.data.template.details.BookDetailFrag"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_book_details">
+        tools:layout="@layout/fragment_ghibli_details">
 
         <action
-            android:id="@+id/navigateToBookListFragment"
+            android:id="@+id/navigateToGhibliListFragment"
             app:destination="@id/BookListFragment" />
     </fragment>
 

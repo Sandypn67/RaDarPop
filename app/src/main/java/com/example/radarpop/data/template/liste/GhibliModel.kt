@@ -1,8 +1,10 @@
 package com.example.radarpop.data.template.liste
 
-sealed class BookModel
+import com.example.radarpop.data.template.apibook.GhibliListResp
+
+sealed class GhibliModel
 //maitrise l'héritage
 
-data class PokemonSuccess(val bookList : List<Ghibli>) : BookModel()
-object BookLoader : BookModel()
-object BookError : BookModel()
+data class FilmSuccess(val filmList: List<GhibliListResp>) : GhibliModel()
+object FilmLoader : GhibliModel()
+object FilmError : GhibliModel()

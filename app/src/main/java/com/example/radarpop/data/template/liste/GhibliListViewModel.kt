@@ -8,31 +8,32 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+
 class GhibliListViewModel: ViewModel() {
-    val pokeList : MutableLiveData<BookModel> = MutableLiveData()
+    val filmList : MutableLiveData<GhibliModel> = MutableLiveData()
 
     init {
         callApi()
     }
 
     private fun callApi() {
-        pokeList.value = BookLoader
+        filmList.value = FilmLoader
 
-        Singleton.bookApi.getBookList().enqueue(object : Callback<GhibliListResp> {
-            override fun onFailure(call: Call<GhibliListResp>, t: Throwable) {
-                pokeList.value = BookError
+        Singleton.filmApi.getGhibliList().enqueue(object : Callback<List<GhibliListResp>> {
+            override fun onFailure(call: Call<List<GhibliListResp>>, t: Throwable) {
+                filmList.value = FilmError
             }
 
-            override fun onResponse(call: Call<GhibliListResp>, response: Response<GhibliListResp>) {
+            override fun onResponse(call: Call<List<GhibliListResp>>, response: Response<List<GhibliListResp>>) {
                 if (response.isSuccessful && response.body() != null) {
-                    val pokemonResponse = response.body()!!
-                    pokeList.value = PokemonSuccess(pokemonResponse.results)
+                    val filmResponse: List<GhibliListResp> = response.body()!!
+                    filmList.value = FilmSuccess(filmResponse)
 //                    adapter.updateList(pokemonResponse.results)
 //                    saveListIntoCache()
 //                    showList(pokemonResponse.results)
                 }
                 else {
-                    pokeList.value = BookError
+                    filmList.value = FilmError
                 }
             }
         })

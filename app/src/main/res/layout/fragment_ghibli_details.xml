@@ -8,7 +8,7 @@
     tools:context=".data.template.details.BookDetailFrag">
 
     <TextView
-        android:id="@+id/book_detail_name"
+        android:id="@+id/ghibli_detail_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/indieflowerregular"
@@ -34,6 +34,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/book_detail_name" />
+        app:layout_constraintTop_toBottomOf="@id/ghibli_detail_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

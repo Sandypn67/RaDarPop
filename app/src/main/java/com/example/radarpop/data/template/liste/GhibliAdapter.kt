@@ -8,8 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.radarpop.R
+import com.example.radarpop.data.template.apibook.GhibliListResp
 
-class GhibliAdapter (private var dataSet: List<Ghibli>, var listener: ( (Int) -> Unit )? = null ) : RecyclerView.Adapter<GhibliAdapter.ViewHolder>() {
+class GhibliAdapter (private var dataSet:List<GhibliListResp>, var listener: ( (Int) -> Unit )? = null ) : RecyclerView.Adapter<GhibliAdapter.ViewHolder>() {
 
 
     /**
@@ -21,12 +22,12 @@ class GhibliAdapter (private var dataSet: List<Ghibli>, var listener: ( (Int) ->
         val imageView: ImageView
         init {
             // Define click listener for the ViewHolder's View.
-            textView = view.findViewById(R.id.book_name)
-            imageView = view.findViewById(R.id.book_img)
+            textView = view.findViewById(R.id.ghibli_name)
+            imageView = view.findViewById(R.id.ghibli_img)
         }
     }
 
-    fun updateList(list : List<Ghibli>){
+    fun updateList(list: List<GhibliListResp>){
         dataSet = list
         notifyDataSetChanged()
     }
@@ -35,23 +36,23 @@ class GhibliAdapter (private var dataSet: List<Ghibli>, var listener: ( (Int) ->
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         // Create a new view, which defines the UI of the list item
         val view = LayoutInflater.from(viewGroup.context)
-                .inflate(R.layout.book_item, viewGroup, false)
+                .inflate(R.layout.ghibli_item, viewGroup, false)
 
         return ViewHolder(view)
     }
 
     // Replace the contents of a view (invoked by the layout manager)
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        val pokemon= dataSet[position]
+        val ghibli= dataSet[position]
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        viewHolder.textView.text = pokemon.name
+        viewHolder.textView.text = ghibli.title
         viewHolder.itemView.setOnClickListener{
             listener?.invoke(position)
         }
         Glide
                 .with(viewHolder.itemView.context)
-                .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${position+1}.png")
+                .load("https://github.com/Sandypn67/Cancel/blob/main/${position+1}.png")
                 .centerCrop()
                 .into(viewHolder.imageView);
     }

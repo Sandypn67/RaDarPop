@@ -8,11 +8,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.radarpop.R
-import com.example.radarpop.data.template.apibook.BookDetailResp
-import com.example.radarpop.data.template.Singleton
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import androidx.navigation.fragment.findNavController
 
 class  OptionFrag : Fragment() {

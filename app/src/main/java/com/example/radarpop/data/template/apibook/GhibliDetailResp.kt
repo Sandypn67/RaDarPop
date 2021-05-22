@@ -1,16 +1,16 @@
 package com.example.radarpop.data.template.apibook
 
-data class BookDetailResp(
+data class GhibliDetailResp(
     val name: String,
-    val types : List<BookSlot>
+    val types : List<GhibliSlot>
 )
 
-data class BookSlot(
-    val slot: String,
-    val type: BookType
+data class GhibliSlot(
+    val slot: Int,
+    val type: GhibliType
 )
 
-data class BookType(
+data class GhibliType(
     val name :String,
     val url : String
 )

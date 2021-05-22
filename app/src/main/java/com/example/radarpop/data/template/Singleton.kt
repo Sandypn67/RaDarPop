@@ -16,8 +16,8 @@ class Singleton {
             .cache(cache)
             .build()
 
-        val bookApi: GhibliApi = Retrofit.Builder()
-            .baseUrl("https://pokeapi.co/api/v2/")
+        val filmApi: GhibliApi = Retrofit.Builder()
+            .baseUrl("https://ghibliapi.herokuapp.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()
@@ -28,4 +28,10 @@ class Singleton {
 
 /**
  * https://ghibliapi.herokuapp.com/films
+ *
+ *
+ * https://api.thecatapi.com/v1/breeds?api_key=ee16cd75-db72-4fee-b1d5-82016622890f
+ *https://api.thecatapi.com/v1/images/search?breed_ids={breed-id}?api_key=ee16cd75-db72-4fee-b1d5-82016622890f
+ *
+ *
  * */
