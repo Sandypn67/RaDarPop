@@ -36,11 +36,12 @@ exemples :
     AndroidStudio -  environnement de développement
     
 ## Projet en pratique
-Auteur:
+### Auteur:
 
     Sandrine Miconnet alias @Sandypn67
     
-Le contenu du Github:
+### Le contenu du Github:
+
 Nécessaire:
 #### Faire une liste à puces
 * Element
