@@ -2,8 +2,6 @@
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
 
-forthebadge forthebadge
-
 ### Une petite description du projet
 Pour commencer
 
@@ -37,19 +35,32 @@ exemples :
     ghibliapi.herokuapp.com - API Ghibli
     AndroidStudio -  environnement de développement
     
-## Contributing
-
-Listez les versions ici exemple : Dernière version stable : 5.0 Dernière version : 5.1 Liste des versions : Cliquer pour afficher (pour le lien mettez simplement l'URL de votre projets suivi de /tags)
-Auteurs
-
-Listez le(s) auteur(s) du projet ici !
+##Projet en pratique
+Auteur:
 
     Sandrine Miconnet alias @Sandypn67
+    
+Le contenu du Github:
 
-Lisez la liste des contributeurs pour voir qui à aidé au projet !
+    Nécessaire:
+####Faire une liste à puces
+*Element
+*Autre élément
 
-(pour le lien mettez simplement l'URL de votre projet suivi de /contirubors)
-License
+    Les plus:
+####Faire une liste à puces
+*Element
+*Autre élément
 
+## Design
+La page d'accueil:
 ![alt text](https://github.com/Sandypn67/RaDarPop/blob/master/Accueil.PNG)
 
+La page de détail:
+![alt text](https://github.com/Sandypn67/RaDarPop/blob/master/secondePage.PNG)
+
+La page d'informations complémentaire sur le studio:
+![alt text](https://github.com/Sandypn67/RaDarPop/blob/master/troisi%C3%A8mePage.PNG)
+
+
+**Enjoy your app !**
