@@ -1,10 +1,10 @@
-Titre du projet
+# Titre du projet
 
 (juste en dessous des badges sympatiques à placer)
 
 forthebadge forthebadge
 
-Une petite description du projet
+### Une petite description du projet
 Pour commencer
 
 Entrez ici les instructions pour bien débuter avec votre projet...
@@ -16,7 +16,7 @@ Ce qu'il est requis pour commencer avec votre projet...
     Programme 2
     etc...
 
-Installation
+##  Installation
 
 Les étapes pour installer votre programme....
 
@@ -37,7 +37,7 @@ exemples :
     Materialize.css - Framework CSS (front-end)
     Atom - Editeur de textes
 
-Contributing
+## Contributing
 
 Si vous souhaitez contribuer, lisez le fichier CONTRIBUTING.md pour savoir comment le faire.
 Versions
