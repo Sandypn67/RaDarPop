@@ -1,6 +1,6 @@
 # RaDarPop : The Ghibli App
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/contains-17-coffee-cups.svg)](https://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) https://forthebadge.com/images/badges/powered-by-coffee.svg
 
 forthebadge forthebadge
 
