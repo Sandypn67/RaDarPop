@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
@@ -26,6 +27,9 @@ class  BookDetailFrag : Fragment() {
 
     val filmList : MutableLiveData<GhibliModel> = MutableLiveData()
     private lateinit var TextViewName : TextView
+    private lateinit var TextViewDate : TextView
+    private lateinit var loader : ProgressBar
+    private lateinit var error_gen : TextView
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -38,6 +42,9 @@ class  BookDetailFrag : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         TextViewName = view.findViewById(R.id.ghibli_detail_name)
+        TextViewDate = view.findViewById(R.id.ghibli_detail_date)
+        loader = view.findViewById(R.id.ghibli_loader)
+        error_gen = view.findViewById(R.id.ghibli_error)
         callApi()
 
         view.findViewById<Button>(R.id.button_retour).setOnClickListener {
@@ -54,7 +61,6 @@ class  BookDetailFrag : Fragment() {
 
     private fun callApi() {
         filmList.value = FilmLoader
-        val id = arguments?.getString("bookId") ?: -1
         Singleton.filmApi.getGhibliList().enqueue(object : Callback<List<GhibliListResp>> {
             override fun onFailure(call: Call<List<GhibliListResp>>, t: Throwable) {
             }

@@ -52,8 +52,8 @@ class GhibliAdapter (private var dataSet:List<GhibliListResp>, var listener: ( (
         }
         Glide
                 .with(viewHolder.itemView.context)
-        //File(app/src/main/res/etc)
-                .load("https://www.studioghibli.fr/wp-content/uploads/2017/03/noiraude.jpg")
+                //File(app/src/main/res/drawable/totoro.png)
+                .load("https://i.pinimg.com/originals/63/01/78/6301783183305a32d118bc19d422da86.jpg")
                 .circleCrop()
                 .into(viewHolder.imageView);
     }
