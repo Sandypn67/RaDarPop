@@ -52,8 +52,9 @@ class GhibliAdapter (private var dataSet:List<GhibliListResp>, var listener: ( (
         }
         Glide
                 .with(viewHolder.itemView.context)
-                .load("https://github.com/Sandypn67/Cancel/blob/main/${position+1}.png")
-                .centerCrop()
+        //File(app/src/main/res/etc)
+                .load("https://www.studioghibli.fr/wp-content/uploads/2017/03/noiraude.jpg")
+                .circleCrop()
                 .into(viewHolder.imageView);
     }
 

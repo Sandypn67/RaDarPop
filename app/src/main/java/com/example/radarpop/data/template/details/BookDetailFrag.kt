@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.MutableLiveData
 import com.example.radarpop.R
 import com.example.radarpop.data.template.apibook.GhibliDetailResp
 import com.example.radarpop.data.template.Singleton
@@ -15,9 +16,15 @@ import retrofit2.Callback
 import retrofit2.Response
 import androidx.navigation.fragment.findNavController
 import com.example.radarpop.data.template.apibook.GhibliListResp
+import com.example.radarpop.data.template.liste.FilmError
+import com.example.radarpop.data.template.liste.FilmLoader
+import com.example.radarpop.data.template.liste.FilmSuccess
+import com.example.radarpop.data.template.liste.GhibliModel
 
 class  BookDetailFrag : Fragment() {
 
+
+    val filmList : MutableLiveData<GhibliModel> = MutableLiveData()
     private lateinit var TextViewName : TextView
 
     override fun onCreateView(
@@ -41,7 +48,12 @@ class  BookDetailFrag : Fragment() {
         }
     }
 
+    init {
+        callApi()
+    }
+
     private fun callApi() {
+        filmList.value = FilmLoader
         val id = arguments?.getString("bookId") ?: -1
         Singleton.filmApi.getGhibliList().enqueue(object : Callback<List<GhibliListResp>> {
             override fun onFailure(call: Call<List<GhibliListResp>>, t: Throwable) {
@@ -49,10 +61,17 @@ class  BookDetailFrag : Fragment() {
 
             override fun onResponse(call: Call<List<GhibliListResp>>, response: Response<List<GhibliListResp>>) {
                 if (response.isSuccessful && response.body() != null) {
+                    val filmResponse: List<GhibliListResp> = response.body()!!
+                    filmList.value = FilmSuccess(filmResponse)
+                }
+                else {
+                    filmList.value = FilmError
+                }
+               /* if (response.isSuccessful && response.body() != null) {
                     val ghibli: List<GhibliListResp> = response.body()!!
                     TextViewName.text = response.body()!!.single().description
                     TextViewName.text = response.body()!!.single().date
-                }
+                }*/
             }
 
         })

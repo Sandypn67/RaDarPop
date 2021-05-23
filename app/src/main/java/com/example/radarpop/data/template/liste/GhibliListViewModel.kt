@@ -28,9 +28,6 @@ class GhibliListViewModel: ViewModel() {
                 if (response.isSuccessful && response.body() != null) {
                     val filmResponse: List<GhibliListResp> = response.body()!!
                     filmList.value = FilmSuccess(filmResponse)
-//                    adapter.updateList(pokemonResponse.results)
-//                    saveListIntoCache()
-//                    showList(pokemonResponse.results)
                 }
                 else {
                     filmList.value = FilmError

@@ -16,4 +16,5 @@ data class Ghibli(
 
         @SerializedName("director")
         val director: String
+
 )

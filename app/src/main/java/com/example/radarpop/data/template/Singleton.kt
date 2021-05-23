@@ -25,13 +25,3 @@ class Singleton {
 
     }
 }
-
-/**
- * https://ghibliapi.herokuapp.com/films
- *
- *
- * https://api.thecatapi.com/v1/breeds?api_key=ee16cd75-db72-4fee-b1d5-82016622890f
- *https://api.thecatapi.com/v1/images/search?breed_ids={breed-id}?api_key=ee16cd75-db72-4fee-b1d5-82016622890f
- *
- *
- * */

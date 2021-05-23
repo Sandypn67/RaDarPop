@@ -8,6 +8,24 @@
     tools:context=".data.template.details.BookDetailFrag">
 
     <TextView
+        android:id="@+id/ghibli_detail_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/trans"
+        android:fontFamily="@font/indieflowerregular"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.259"
+        tools:text="1985" />
+
+    <TextView
         android:id="@+id/ghibli_detail_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.376"
-        tools:text="The Hunger Games" />
+        tools:text="Kiki's Delivery Service" />
 
     <Button
         android:id="@+id/button_info"
