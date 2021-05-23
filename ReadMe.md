@@ -1,6 +1,6 @@
 # RaDarPop : The Ghibli App
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/contains-17-coffee-cups.svg)](https://forthebadge.com)
 
 forthebadge forthebadge
 
@@ -34,24 +34,19 @@ Entrez les programmes/logiciels/ressources que vous avez utilisé pour développ
 
 exemples :
 
-    Materialize.css - Framework CSS (front-end)
-    Atom - Editeur de textes
-
+    ghibliapi.herokuapp.com - API Ghibli
+    AndroidStudio -  environnement de développement
+    
 ## Contributing
-
-Si vous souhaitez contribuer, lisez le fichier CONTRIBUTING.md pour savoir comment le faire.
-Versions
 
 Listez les versions ici exemple : Dernière version stable : 5.0 Dernière version : 5.1 Liste des versions : Cliquer pour afficher (pour le lien mettez simplement l'URL de votre projets suivi de /tags)
 Auteurs
 
 Listez le(s) auteur(s) du projet ici !
 
-    Jhon doe alias @outout14
+    Sandrine Miconnet alias @Sandypn67
 
 Lisez la liste des contributeurs pour voir qui à aidé au projet !
 
 (pour le lien mettez simplement l'URL de votre projet suivi de /contirubors)
 License
-
-Ce projet est sous licence exemple: WTFTPL - voir le fichier LICENSE.md pour plus d'informations
