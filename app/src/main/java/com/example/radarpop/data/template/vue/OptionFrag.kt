@@ -1,4 +1,4 @@
-package com.example.radarpop.data.template.liste
+package com.example.radarpop.data.template.vue
 
 import android.os.Bundle
 import android.view.LayoutInflater

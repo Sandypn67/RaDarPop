@@ -1,6 +1,6 @@
 package com.example.radarpop.data.template
 
-import com.example.radarpop.data.template.apibook.GhibliApi
+import com.example.radarpop.data.template.controleur.GhibliApi
 import com.example.radarpop.data.template.GhibliApp.Companion.context
 import okhttp3.Cache
 import okhttp3.OkHttpClient

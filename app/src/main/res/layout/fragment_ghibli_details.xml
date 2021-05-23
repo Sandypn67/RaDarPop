@@ -5,25 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/second"
-    tools:context=".data.template.details.BookDetailFrag">
-
-    <TextView
-        android:id="@+id/ghibli_detail_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/trans"
-        android:fontFamily="@font/indieflowerregular"
-        android:paddingLeft="5dp"
-        android:paddingTop="10dp"
-        android:paddingRight="5dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.259"
-        tools:text="1985" />
+    tools:context=".data.template.vue.BookDetailFrag">
 
     <TextView
         android:id="@+id/ghibli_detail_name"
@@ -35,12 +17,13 @@
         android:paddingTop="10dp"
         android:paddingRight="5dp"
         android:paddingBottom="10dp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.376"
+        app:layout_constraintVertical_bias="0.24"
         tools:text="Kiki's Delivery Service" />
 
     <Button
@@ -51,6 +34,8 @@
         android:fontFamily="@font/spiraxregular"
         android:padding="@dimen/cardview_default_elevation"
         android:text="Info Studio"
+        android:textStyle="bold"
+        android:background="@drawable/buttonscolor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ghibli_detail_name" />
@@ -63,6 +48,8 @@
         android:fontFamily="@font/spiraxregular"
         android:padding="@dimen/cardview_default_elevation"
         android:text="@string/retour"
+        android:textStyle="bold"
+        android:background="@drawable/buttonscolor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

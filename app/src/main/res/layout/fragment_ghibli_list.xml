@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".data.template.liste.GhibliListFrag"
+    tools:context=".data.template.vue.GhibliListFrag"
     android:background="@drawable/first"
     >
 

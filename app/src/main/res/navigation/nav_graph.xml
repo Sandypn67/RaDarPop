@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/Option"
-        android:name="com.example.radarpop.data.template.liste.OptionFrag"
+        android:name="com.example.radarpop.data.template.vue.OptionFrag"
         android:label="accueil"
         tools:layout="@layout/fragment_ghibli_list">
 
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/BookListFragment"
-        android:name="com.example.radarpop.data.template.liste.GhibliListFrag"
+        android:name="com.example.radarpop.data.template.vue.GhibliListFrag"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_ghibli_list">
 
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/BookDetailFragment"
-        android:name="com.example.radarpop.data.template.details.BookDetailFrag"
+        android:name="com.example.radarpop.data.template.vue.BookDetailFrag"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_ghibli_details">
         <action

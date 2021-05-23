@@ -1,4 +1,4 @@
-package com.example.radarpop.data.template.liste
+package com.example.radarpop.data.template.vue
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,6 +15,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.radarpop.R
+import com.example.radarpop.data.template.controleur.GhibliAdapter
 
 class GhibliListFrag : Fragment() {
 

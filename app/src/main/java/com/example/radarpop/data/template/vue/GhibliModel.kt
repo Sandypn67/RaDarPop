@@ -1,6 +1,6 @@
-package com.example.radarpop.data.template.liste
+package com.example.radarpop.data.template.vue
 
-import com.example.radarpop.data.template.apibook.GhibliListResp
+import com.example.radarpop.data.template.controleur.GhibliListResp
 
 sealed class GhibliModel
 //maitrise l'héritage
