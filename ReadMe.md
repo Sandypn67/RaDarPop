@@ -35,31 +35,34 @@ exemples :
     ghibliapi.herokuapp.com - API Ghibli
     AndroidStudio -  environnement de développement
     
-##Projet en pratique
+## Projet en pratique
 Auteur:
 
     Sandrine Miconnet alias @Sandypn67
     
 Le contenu du Github:
 
-    Nécessaire:
-####Faire une liste à puces
-*Element
-*Autre élément
+   Nécessaire:
+#### Faire une liste à puces
+* Element
+* Autre élément
 
     Les plus:
-####Faire une liste à puces
-*Element
-*Autre élément
+#### Faire une liste à puces
+* Element
+* Autre élément
 
 ## Design
 La page d'accueil:
+
 ![alt text](https://github.com/Sandypn67/RaDarPop/blob/master/Accueil.PNG)
 
 La page de détail:
+
 ![alt text](https://github.com/Sandypn67/RaDarPop/blob/master/secondePage.PNG)
 
 La page d'informations complémentaire sur le studio:
+
 ![alt text](https://github.com/Sandypn67/RaDarPop/blob/master/troisi%C3%A8mePage.PNG)
 
 
