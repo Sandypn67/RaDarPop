@@ -1,6 +1,6 @@
-# Titre du projet
+# RaDarPop : The Ghibli App
 
-(juste en dessous des badges sympatiques à placer)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
 forthebadge forthebadge
 
