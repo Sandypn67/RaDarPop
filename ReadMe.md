@@ -41,12 +41,11 @@ Auteur:
     Sandrine Miconnet alias @Sandypn67
     
 Le contenu du Github:
-
-   Nécessaire:
+    Nécessaire:
 #### Faire une liste à puces
 * Element
 * Autre élément
-
+-----------------
     Les plus:
 #### Faire une liste à puces
 * Element
