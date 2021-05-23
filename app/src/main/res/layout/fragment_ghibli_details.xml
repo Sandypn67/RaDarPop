@@ -46,7 +46,8 @@
         android:padding="@dimen/cardview_default_elevation"
         android:text="@string/retour"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ghibli_detail_name" />
 

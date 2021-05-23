@@ -1,5 +1,7 @@
 package com.example.radarpop.data.template.apibook
 
+
+//A retirer car ne l'utilise plus
 data class GhibliDetailResp(
     val name: String,
     val types : List<GhibliSlot>
