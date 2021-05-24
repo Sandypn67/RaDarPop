@@ -35,14 +35,14 @@ Programmes, logiciels et ressources utilisées dans ce projet:
 ### Le contenu du Github:
 
 Nécessaire:
-#### Faire une liste à puces
+####
 * Ecran avec une liste d'élements
 * Appel WebService à une API Rest
 * Stockage de données en cache
 * Ecran avec le détail d'un élément
 -----------------
 Les plus:
-#### Faire une liste à puces
+####
 * Singleton
 * Design
 * MVC
