@@ -55,7 +55,7 @@ La page d'accueil: liste des films disponibles (*titre en anglais car API anglai
 
 La page de détail: affiche le synopsis du film (*description en anglais car API anglaise)
 
-![alt text](https://github.com/Sandypn67/RaDarPop/blob/master/secondePage.PNG)
+![alt text](https://github.com/Sandypn67/RaDarPop/blob/master/detailPage.PNG)
 
 La page d'informations complémentaire sur le studio: (*texte en français car contenu fixe)
 
