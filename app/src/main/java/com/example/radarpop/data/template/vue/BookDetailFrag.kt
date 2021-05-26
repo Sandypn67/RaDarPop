@@ -1,7 +1,6 @@
 package com.example.radarpop.data.template.vue
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,27 +8,21 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 import com.example.radarpop.R
-import com.example.radarpop.data.template.Singleton
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import androidx.navigation.fragment.findNavController
-import com.example.radarpop.data.template.controleur.GhibliListResp
-import com.example.radarpop.data.template.vue.FilmError
-import com.example.radarpop.data.template.vue.FilmLoader
-import com.example.radarpop.data.template.vue.FilmSuccess
-import com.example.radarpop.data.template.vue.GhibliModel
 
 class  BookDetailFrag : Fragment() {
 
 
     val filmList : MutableLiveData<GhibliModel> = MutableLiveData()
     private lateinit var TextViewName : TextView
-    private lateinit var TextViewDate : TextView
-    private lateinit var loader : ProgressBar
-    private lateinit var error_gen : TextView
+    //private lateinit var loader : ProgressBar
+    //private lateinit var error_gen : TextView
+
+    private val viewModel: GhibliListViewModel by activityViewModels()
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -42,9 +35,8 @@ class  BookDetailFrag : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         TextViewName = view.findViewById(R.id.ghibli_detail_name)
-        loader = view.findViewById(R.id.ghibli_loader)
-        error_gen = view.findViewById(R.id.ghibli_error)
-        callApi()
+        //loader = view.findViewById(R.id.ghibli_loader)
+        //error_gen = view.findViewById(R.id.ghibli_error)
 
         view.findViewById<Button>(R.id.button_retour).setOnClickListener {
             findNavController().navigate(R.id.navigateToGhibliListFragment)
@@ -52,13 +44,13 @@ class  BookDetailFrag : Fragment() {
         view.findViewById<Button>(R.id.button_info).setOnClickListener {
             findNavController().navigate(R.id.navigatetoInfos)
         }
+
+        viewModel.filmList.observe(viewLifecycleOwner, Observer { filmModel ->
+        })
+        TextViewName.text = viewModel.Getdes()
     }
 
-    init {
-        callApi()
-    }
-
-    private fun callApi() {
+   /* private fun callApi() {
         filmList.value = FilmLoader
         Singleton.filmApi.getGhibliList().enqueue(object : Callback<List<GhibliListResp>> {
             override fun onFailure(call: Call<List<GhibliListResp>>, t: Throwable) {
@@ -68,7 +60,7 @@ class  BookDetailFrag : Fragment() {
                 if (response.isSuccessful && response.body() != null) {
                     val filmResponse: List<GhibliListResp> = response.body()!!
                     //filmList.value = FilmSuccess(filmResponse.toString())
-                    TextViewName.text = response.body()!!.toString().slice(53..403)
+                    //TextViewName.text = response.body()!!.toString().slice(53..403)
                 }
                 /*else {
                     filmList.value = FilmError
@@ -76,5 +68,5 @@ class  BookDetailFrag : Fragment() {
             }
 
         })
-    }
+    }*/
 }

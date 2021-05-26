@@ -9,7 +9,18 @@
         android:id="@+id/Option"
         android:name="com.example.radarpop.data.template.vue.OptionFrag"
         android:label="accueil"
-        tools:layout="@layout/fragment_ghibli_list">
+        tools:layout="@layout/option">
+
+        <action
+            android:id="@+id/navigateToGhibliListFragment"
+            app:destination="@id/BookListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Favoris"
+        android:name="com.example.radarpop.data.template.vue.FavFrag"
+        android:label="fav"
+        tools:layout="@layout/fav">
 
         <action
             android:id="@+id/navigateToGhibliListFragment"
@@ -25,6 +36,12 @@
         <action
             android:id="@+id/navigateToBookDetailFragment"
             app:destination="@id/BookDetailFragment" />
+        <action
+            android:id="@+id/navigateToOptionFragment"
+            app:destination="@id/Option" />
+        <action
+            android:id="@+id/navigateToFavFragment"
+            app:destination="@id/Favoris" />
     </fragment>
     <fragment
         android:id="@+id/BookDetailFragment"

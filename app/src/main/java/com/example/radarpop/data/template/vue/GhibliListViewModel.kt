@@ -11,7 +11,7 @@ import retrofit2.Response
 
 class GhibliListViewModel: ViewModel() {
     val filmList : MutableLiveData<GhibliModel> = MutableLiveData()
-
+    val listGhibli: MutableLiveData<List<GhibliListResp>> = MutableLiveData()
     init {
         callApi()
     }
@@ -28,12 +28,19 @@ class GhibliListViewModel: ViewModel() {
                 if (response.isSuccessful && response.body() != null) {
                     val filmResponse: List<GhibliListResp> = response.body()!!
                     filmList.value = FilmSuccess(filmResponse)
+                    listGhibli.value = filmResponse
                 }
                 else {
                     filmList.value = FilmError
                 }
             }
         })
+    }
+
+    fun Getdes(): String {
+        val descrip: String
+        descrip = listGhibli.value!![0].description
+        return descrip
     }
 
 }

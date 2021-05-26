@@ -2,15 +2,20 @@ package com.example.radarpop.data.template.vue
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,7 +29,7 @@ class GhibliListFrag : Fragment() {
     private lateinit var error_gen : TextView
 
     private val adapter = GhibliAdapter(listOf(), ::onClickedGhibli)
-    private val viewModel: GhibliListViewModel by viewModels()
+    private val viewModel: GhibliListViewModel by activityViewModels()
 
 
     //methode pour faire du cache mais pas utilisée ici
@@ -58,8 +63,17 @@ class GhibliListFrag : Fragment() {
             }
 
         })
+/*
+        view.findViewById<Button>(R.id.infos).setOnClickListener {
+            findNavController().navigate(R.id.navigateToOptionFragment)
+        }
+        view.findViewById<Button>(R.id.favourite).setOnClickListener {
+            findNavController().navigate(R.id.navigateToFavFragment)
+        }
 
+ */
     }
+
 
     /**private fun showList(pokeList: List<Ghibli>) {
         adapter.updateList(pokeList)
