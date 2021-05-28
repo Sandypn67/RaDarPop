@@ -5,6 +5,8 @@
 ### Une petite description du projet
 Mon application a pour but de donner envie aux utilisateurs de découvrir les films d'animation du studio japonais Ghibli. Elle se compose d'une page d'accueil avec une liste des différents films créé par ce studio depuis sa création en 1985, d'une page de description du film - le synopsis en anglais de celui-ci- et d'une dernière page d'informations concernant le studio.
 
+![alt text](https://github.com/Sandypn67/RaDarPop/blob/master/icone.PNG)
+
 Ce qu'il est requis pour commencer avec RaDarPop: The Ghibli App 
 
     Android Studio
