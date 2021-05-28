@@ -18,12 +18,15 @@ class GhibliListViewModel: ViewModel() {
 
     private fun callApi() {
         filmList.value = FilmLoader
-
+        //appelle le singleton pour recuperer la liste de films récuperée de l'api et teste la réponse
         Singleton.filmApi.getGhibliList().enqueue(object : Callback<List<GhibliListResp>> {
+
+            //s'il y a un probleme dans la réponse
             override fun onFailure(call: Call<List<GhibliListResp>>, t: Throwable) {
                 filmList.value = FilmError
             }
 
+            //si la réponse du singleton n'a pas eu de probleme lors de l'appel
             override fun onResponse(call: Call<List<GhibliListResp>>, response: Response<List<GhibliListResp>>) {
                 if (response.isSuccessful && response.body() != null) {
                     val filmResponse: List<GhibliListResp> = response.body()!!
@@ -37,6 +40,7 @@ class GhibliListViewModel: ViewModel() {
         })
     }
 
+    // permet de récuperer uniquement la description dans tout ce que le singleton récupere
     fun Getdes(): String {
         val descrip: String
         descrip = listGhibli.value!![0].description

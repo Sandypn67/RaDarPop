@@ -14,6 +14,7 @@ class  OptionFrag : Fragment() {
 
     private lateinit var TextViewName : TextView
 
+    //crée la page d'information sur le studio Ghibli avec une cellule de texte et un bouton implementé
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?

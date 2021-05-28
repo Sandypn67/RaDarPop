@@ -17,16 +17,19 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //met en place le layout de l'activité principale soit la page d'accueil
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
     }
 
+    //met en place les options du menu contenu dans le res
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
 
+    //active les boutons de la bottom bar
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long

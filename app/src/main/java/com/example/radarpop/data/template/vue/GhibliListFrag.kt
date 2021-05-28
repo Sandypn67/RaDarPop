@@ -24,6 +24,7 @@ import com.example.radarpop.data.template.controleur.GhibliAdapter
 
 class GhibliListFrag : Fragment() {
 
+    //Déclaration des variables de la page de liste de films
     private lateinit var recyclerView: RecyclerView
     private lateinit var loader : ProgressBar
     private lateinit var error_gen : TextView
@@ -55,14 +56,20 @@ class GhibliListFrag : Fragment() {
             layoutManager = this@GhibliListFrag.layoutManager
             adapter =this@GhibliListFrag.adapter
         }
+        //renvoit un visuel différent en fonction de ce qu'il récupère de l'api
         viewModel.filmList.observe(viewLifecycleOwner, Observer { filmModel ->
+            //un loader est visible si l'app a du mal à télécharger les données
             loader.isVisible = filmModel is FilmLoader
+            // affiche un message d'erreur si l'app ne peut récuperer les données de l'api
             error_gen.isVisible = filmModel is FilmError
+            //affiche la liste actualisée lorsqu'il recupère l'api
             if(filmModel is FilmSuccess) {
                 adapter.updateList(filmModel.filmList)
             }
 
         })
+
+        //implementation des boutons de la bottom bar
 /*
         view.findViewById<Button>(R.id.infos).setOnClickListener {
             findNavController().navigate(R.id.navigateToOptionFragment)
@@ -74,10 +81,7 @@ class GhibliListFrag : Fragment() {
  */
     }
 
-
-    /**private fun showList(pokeList: List<Ghibli>) {
-        adapter.updateList(pokeList)
-    }*/
+    //en fonction de la cellule clickée, on ne va pas sur la même page de détail (seule change la description affichée)
     private fun onClickedGhibli(id: Int) {
         findNavController().navigate(R.id.navigateToBookDetailFragment, bundleOf("pokemonId" to (id+1)))
     }

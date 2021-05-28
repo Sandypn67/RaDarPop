@@ -20,13 +20,14 @@ class GhibliAdapter (private var dataSet:List<GhibliListResp>, var listener: ( (
         val textView: TextView
         val imageView: ImageView
         init {
-            // Define click listener for the ViewHolder's View.
+            // Initialise le titre et l'image de chaque cellule de la recyclerview
             textView = view.findViewById(R.id.ghibli_name)
             imageView = view.findViewById(R.id.ghibli_img)
         }
     }
 
     fun updateList(list: List<GhibliListResp>){
+        //On change la liste s'il y a un changement
         dataSet = list
         notifyDataSetChanged()
     }
@@ -48,12 +49,15 @@ class GhibliAdapter (private var dataSet:List<GhibliListResp>, var listener: ( (
         viewHolder.textView.text = ghibli.title
         viewHolder.itemView.setOnClickListener{
             listener?.invoke(position)
+            //recupere la position ou le click a eu lieu
         }
         Glide
                 .with(viewHolder.itemView.context)
-                //File(app/src/main/res/drawable/totoro.png)
+                //télécharge l'image depuis internet
                 .load("https://i.pinimg.com/originals/63/01/78/6301783183305a32d118bc19d422da86.jpg")
+                //la met sous forme d'un cercle
                 .circleCrop()
+                // l'insere dans le view holder de la cellule de la recyclerview
                 .into(viewHolder.imageView);
     }
 
