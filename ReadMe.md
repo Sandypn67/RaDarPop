@@ -12,7 +12,7 @@ Ce qu'il est requis pour commencer avec RaDarPop: The Ghibli App
     Android Studio
     Emulateur portable supportant SdkVersion >= 23
     Télécharger le projet depuis la branche master de ce répertoire et l'importer dans votre logiciel AndroidStudio
-    Avoir une bonne connexion internet pour télécharger les données de l'API
+    Avoir une bonne connexion internet pour télécharger les données de l'API Rest Ghibli
 
 ##  Installation
 
